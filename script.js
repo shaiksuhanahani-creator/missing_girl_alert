@@ -15,9 +15,8 @@ Please help find this person.`;
   window.open(url, "_blank");
 }
 
-// Share FOUND update
 function shareFoundWhatsApp() {
-  let message = `✅ UPDATE: The missing person Priya Sharma has been FOUND safely.
+  let message = `✅ UPDATE: The missing person ${name} has been FOUND safely.
 Please stop forwarding the previous alert.
 Thank you for your support.`;
 
