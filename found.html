@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Report Found Person</title>
+  <meta charset="UTF-8">
+  <title>Report Found Person</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h2>Report a Found Person</h2>
+<div class="container">
+  <h1>Report Found Person</h1>
 
-<form action="submit_found.php" method="POST">
-    
-    <label>Person Name (if known):</label><br>
-    <input type="text" name="name" placeholder="Enter name"><br><br>
+  <form onsubmit="sendWhatsApp(); return false;">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="number" id="age" placeholder="Age" required>
+    <input type="text" id="location" placeholder="Location Found" required>
 
-    <label>Approximate Age:</label><br>
-    <input type="number" name="age" placeholder="Enter age"><br><br>
+    <button type="submit">Send via WhatsApp</button>
+  </form>
+</div>
 
-    <label>Location Found:</label><br>
-    <input type="text" name="location" placeholder="Where was the person found?"><br><br>
-
-    <button type="submit">Submit Report</button>
-
-</form>
-
+<script src="script.js"></script>
 </body>
 </html>
