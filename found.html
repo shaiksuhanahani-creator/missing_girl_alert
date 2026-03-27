@@ -1,35 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Person Found</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Report Found Person</title>
 </head>
 <body>
 
-<div class="container">
-  <h1>✅ Person Found</h1>
-  <p class="subtitle">The missing person has been successfully located.</p>
+<h2>Report a Found Person</h2>
 
-  <div class="card">
-    <img src="person.jpg" alt="Person Image">
+<form action="submit_found.php" method="POST">
+    
+    <label>Person Name (if known):</label><br>
+    <input type="text" name="name" placeholder="Enter name"><br><br>
 
-    <h2>Name: Priya Sharma</h2>
-    <p>Age: 14</p>
-    <p>Last Seen: Hyderabad</p>
+    <label>Approximate Age:</label><br>
+    <input type="number" name="age" placeholder="Enter age"><br><br>
 
-    <p class="status">Status: FOUND SAFE</p>
-    <p>Date Found: 25 March 2026</p>
-    <p>Location Found: Vijayawada</p>
-  </div>
+    <label>Location Found:</label><br>
+    <input type="text" name="location" placeholder="Where was the person found?"><br><br>
 
-  <p class="warning">
-    ⚠️ Please stop sharing the previous missing alert.
-  </p>
+    <button type="submit">Submit Report</button>
 
-  <button onclick="shareFoundWhatsApp()">Share Update</button>
-</div>
+</form>
 
-<script src="script.js"></script>
 </body>
 </html>
