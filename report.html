@@ -1,49 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Report Missing Girl</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Report Missing Person</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Missing Girl Alert System</h1>
-<h2>Report Missing Girl</h2>
+<div class="container">
+  <h1>Report Missing Person</h1>
 
-<form>
+  <form onsubmit="sendWhatsApp(); return false;">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="number" id="age" placeholder="Age" required>
+    <input type="text" id="location" placeholder="Last Seen Location" required>
 
-<label>Name:</label><br>
-<input type="text" id="name" placeholder="Enter Name"><br>
+    <button type="submit">Send via WhatsApp</button>
+  </form>
+</div>
 
-<label>Age:</label><br>
-<input type="number" id="age" placeholder="Enter Age"><br>
-
-<label>Last Seen Location:</label><br>
-<input type="text" id="place" placeholder="Enter Last Seen Place"><br>
-
-<button type="button" onclick="sendWhatsApp()">Send WhatsApp Alert</button>
-
-</form>
-
-<script>
-function sendWhatsApp() {
-    let name = document.getElementById("name").value;
-    let age = document.getElementById("age").value;
-    let place = document.getElementById("place").value;
-
-    if(name === "" || age === "" || place === ""){
-        alert("Please fill all fields!");
-        return;
-    }
-
-    let message = "🚨 Missing Girl Alert %0A" +
-                  "Name: " + name + "%0A" +
-                  "Age: " + age + "%0A" +
-                  "Last Seen: " + place;
-
-    let url = "https://wa.me/?text=" + message;
-    window.open(url);
-}
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>

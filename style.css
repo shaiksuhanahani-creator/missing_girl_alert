@@ -1,83 +1,63 @@
-/* General body style */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  font-family: Arial, sans-serif;
+  background: #f4f7f8;
+  margin: 0;
 }
 
-/* Header */
+.container {
+  width: 60%;
+  margin: 50px auto;
+  text-align: center;
+}
+
 h1 {
-    background-color: #c62828;
-    color: white;
-    padding: 20px 0;
-    margin: 0;
+  color: #333;
 }
 
-/* Page headings */
-h2 {
-    color: #c62828;
-    margin-top: 30px;
-    font-size: 22px;
+.subtitle {
+  color: #666;
 }
 
-/* Input fields */
-input[type="text"],
-input[type="number"] {
-    padding: 10px;
-    width: 250px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+form input {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
 }
 
-/* Button */
 button {
-    padding: 12px 20px;
-    background-color: #c62828;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+  padding: 10px 20px;
+  margin-top: 15px;
+  background: #25D366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-/* Button hover effect */
-button:hover {
-    background-color: #b71c1c;
+.secondary {
+  background: #007BFF;
 }
 
-/* Form spacing */
-form {
-    margin-top: 30px;
+.card {
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Labels */
-label {
-    font-weight: bold;
+.card img {
+  width: 200px;
+  border-radius: 10px;
 }
 
-/* Responsive Design for Mobile Devices */
-@media screen and (max-width: 600px) {
+.status {
+  color: green;
+  font-weight: bold;
+}
 
-    h1 {
-        font-size: 24px;
-        padding: 15px 0;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    input[type="text"],
-    input[type="number"] {
-        width: 80%;
-    }
-
-    button {
-        width: 80%;
-        font-size: 18px;
-        padding: 15px 0;
-    }
+.warning {
+  color: red;
+  margin-top: 20px;
 }
